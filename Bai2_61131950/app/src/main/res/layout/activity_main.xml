@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quản lý bài thơ"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:hint="Tên tác giả"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:id="@+id/tenbaitho"
+        android:layout_margin="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+    </EditText>
+    <EditText
+        android:hint="Tên bài thơ"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tenbaitho"
+        android:id="@+id/tentacgia"
+        android:layout_margin="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+    </EditText>
+    <EditText
+        android:hint="ID (xóa)"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tentacgia"
+        android:id="@+id/idbaitho"
+        android:layout_margin="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+    </EditText>
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:id="@+id/layout1"
+        app:layout_constraintTop_toBottomOf="@id/idbaitho"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <Button
+            android:id="@+id/them"
+            android:text="Thêm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Button>
+        <Button
+            android:layout_marginLeft="5dp"
+            android:id="@+id/sua"
+            android:text="Sửa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Button>
+        <Button
+            android:layout_marginLeft="5dp"
+            android:id="@+id/xoa"
+            android:text="Xóa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Button>
+    </LinearLayout>
+    <ListView
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/layout1"
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        tools:ignore="MissingConstraints">
+    </ListView>
+</androidx.constraintlayout.widget.ConstraintLayout>
